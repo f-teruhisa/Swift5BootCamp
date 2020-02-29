@@ -32,7 +32,9 @@ class ViewController: UIViewController {
         countLabel.text = String(count)
         
         // 10以上になったら色を黄色に変更させる
-        
+        if count >= 10 {
+            changeTextColor()
+        }
     }
     
     @IBAction func minus(_ sender: Any) {
@@ -43,6 +45,9 @@ class ViewController: UIViewController {
         countLabel.text = String(count)
         
         // 0以下になったら色を黄色に変更させる
+        if count <= 0 {
+            resetColor()
+        }
     }
     
     func changeTextColor(){
