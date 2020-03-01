@@ -24,10 +24,11 @@ class ViewController: UIViewController {
         
         count = 0
         // stopButtonを押せなくする
-        stopButton.isEnabled = true
+        stopButton.isEnabled = false
         
         for i in 0..<5{
-            print(i)
+            let image = UIImage(named: "\(i)")
+            imageArray.append(image!)
         }
         
     }
@@ -41,16 +42,24 @@ class ViewController: UIViewController {
     @objc func timerUpdate(){
       // 0.2秒ごとに呼ばれる
         count = count + 1
+        
+        if count > 4 {
+            count = 0
+        }
+        
         imageView.image = imageArray[count]
     }
     
     
     @IBAction func start(_ sender: Any) {
         // imgaeViewのimageに画像を反映していく
+        startTimer()
         
         // startButonは押せなくなる
-        startButton.isEnabled = true
-        startTimer()
+        startButton.isEnabled = false
+        // stopButtonは押せるようにする
+        stopButton.isEnabled = true
+        
     }
     
     
@@ -58,7 +67,9 @@ class ViewController: UIViewController {
         // imgaeViewのimageに反映されている画像の流れを止める
         
         // startButonを押せるようにする
-        startButton.isEnabled = false
+        startButton.isEnabled = true
+        // stopButtonは押せなくなる
+        stopButton.isEnabled = false
         
         // タイマーを止める
         timer.invalidate()
