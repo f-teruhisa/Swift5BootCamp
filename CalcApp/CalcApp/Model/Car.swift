@@ -21,7 +21,12 @@ class Car{
         
     }
     
+    // 機能
     func drive(){
+        
+        print("運転開始！！")
+        print("前輪: \(frontWheel)")
+        print("後輪: \(rearWheel)")
         
     }
 }
