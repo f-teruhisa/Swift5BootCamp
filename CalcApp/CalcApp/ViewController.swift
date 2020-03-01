@@ -16,13 +16,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //carModel.frontWheel = 10
-        //carModel.rearWheel = 10
+        carModel.frontWheel = 10
+        carModel.rearWheel = 10
     }
 
     @IBAction func doAction(_ sender: Any) {
         
         carModel.drive()
+        carModel.move(toBack: "後ろに行くよ！！")
     }
     
 }

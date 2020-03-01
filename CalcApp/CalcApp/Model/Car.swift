@@ -16,8 +16,8 @@ class Car{
     // initialize = 初期化
     init(){
         
-        frontWheel = 2
-        rearWheel = 2
+        frontWheel = 0
+        rearWheel = 0
         
     }
     
@@ -28,5 +28,9 @@ class Car{
         print("前輪: \(frontWheel)")
         print("後輪: \(rearWheel)")
         
+    }
+    
+    func move(toBack: String){
+        print(toBack)
     }
 }
