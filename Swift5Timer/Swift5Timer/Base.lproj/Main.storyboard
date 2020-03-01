@@ -40,7 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageVIew" destination="Hjh-99-RPM" id="w7f-v3-NoO"/>
+                        <outlet property="imageView" destination="Hjh-99-RPM" id="oL2-Eg-ZQL"/>
                         <outlet property="startButton" destination="fx5-YD-NdK" id="Flf-yl-tbF"/>
                         <outlet property="stopButton" destination="SOA-56-oRe" id="RVz-vM-aLx"/>
                     </connections>

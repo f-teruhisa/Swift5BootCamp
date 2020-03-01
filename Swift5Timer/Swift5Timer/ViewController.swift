@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageVIew: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
@@ -26,7 +26,10 @@ class ViewController: UIViewController {
         // stopButtonを押せなくする
         stopButton.isEnabled = true
         
-        // Property
+        for i in 0..<5{
+            print(i)
+        }
+        
     }
     
     func startTimer(){
@@ -47,6 +50,7 @@ class ViewController: UIViewController {
         
         // startButonは押せなくなる
         startButton.isEnabled = true
+        startTimer()
     }
     
     
@@ -55,6 +59,9 @@ class ViewController: UIViewController {
         
         // startButonを押せるようにする
         startButton.isEnabled = false
+        
+        // タイマーを止める
+        timer.invalidate()
     }
     
 }
