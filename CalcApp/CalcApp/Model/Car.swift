@@ -33,4 +33,8 @@ class Car{
     func move(toBack: String){
         print(toBack)
     }
+    
+    func plusAndMinus(num1: Int, num2: Int) -> Int{
+        return num1 + num2
+    }
 }
