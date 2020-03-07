@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
+    var count = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
     }
 
+    @IBAction func plus(_ sender: Any) {
+        count = count + 1
+        
+        label.text = String(count)
+        
+        if count == 10 {
+            // 画面遷移をする
+            performSegue(withIdentifier: "next", sender: nil)
+            
+        }
+    }
+    
 
 }
 
