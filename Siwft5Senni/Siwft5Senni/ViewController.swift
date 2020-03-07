@@ -28,7 +28,12 @@ class ViewController: UIViewController {
         
         if count == 10 {
             // 画面遷移をする
-            performSegue(withIdentifier: "next", sender: nil)
+            // performSegue(withIdentifier: "next", sender: nil)
+            
+            let nextVC = storyboard?.instantiateViewController(identifier: "next") as! NextViewController
+            nextVC.count2 = count
+            navigationController?.pushViewController(nextVC, animated: true)
+            
             
         }
     }

@@ -21,13 +21,7 @@ class NextViewController: UIViewController {
         
         label2.text = String(count2)
     }
-    
-    @IBAction func back(_ sender: Any) {
         
-        // タップして戻る
-        dismiss(animated: true, completion: nil)
-    }
-    
     /*
     // MARK: - Navigation
 
