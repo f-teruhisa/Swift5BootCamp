@@ -33,6 +33,11 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! NextViewController
+        nextVC.count2 = count
+    }
+    
 
 }
 

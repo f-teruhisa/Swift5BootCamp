@@ -11,11 +11,15 @@ import UIKit
 class NextViewController: UIViewController {
 
     @IBOutlet weak var label2: UILabel!
+    
+    var count2 = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        label2.text = String(count2)
     }
     
     @IBAction func back(_ sender: Any) {
