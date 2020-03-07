@@ -36,12 +36,6 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MjM-3S-wIe">
-                                            <rect key="frame" x="78" y="456" width="268" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        </textField>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pql-OZ-oB0">
                                             <rect key="frame" x="78" y="557" width="268" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,6 +48,26 @@
                                                 <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5lT-rm-JRh"/>
                                             </connections>
                                         </button>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MjM-3S-wIe">
+                                            <rect key="frame" x="78" y="456" width="268" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザーネーム" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wak-RL-QW6">
+                                            <rect key="frame" x="78" y="646" width="268" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="パスワード" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-9S-pWl">
+                                            <rect key="frame" x="78" y="724" width="268" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <blurEffect style="regular"/>
@@ -65,6 +79,8 @@
                     <connections>
                         <outlet property="logoImageVIew" destination="NMJ-Ba-msX" id="8Xp-ze-ytj"/>
                         <outlet property="passWordTextField" destination="MjM-3S-wIe" id="i6M-12-EGI"/>
+                        <outlet property="passwordLabel" destination="7JD-9S-pWl" id="3rv-Su-hko"/>
+                        <outlet property="userNameLabel" destination="Wak-RL-QW6" id="zcI-OH-jXQ"/>
                         <outlet property="userNameTextField" destination="Tl2-J6-Jmo" id="KP2-RL-riQ"/>
                     </connections>
                 </viewController>
