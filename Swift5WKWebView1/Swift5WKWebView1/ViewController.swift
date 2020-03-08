@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
     
     var webView = WKWebView()
 
@@ -28,16 +28,30 @@ class ViewController: UIViewController {
         view.addSubview(webView)
         
         // 何をロードするのか
-        
-        // どこにつけるのか
-        
-        
+        webView.navigationDelegate = self
+        let url = URL(string: "https://www.yahoo.co.jp/")
+        let request = URLRequest(url: url!)
+        webView.load(request)
+    }
+    
+    // ロードが開始されたとき
+    func webView(_ <#T##webView: WKWebView##WKWebView#>, didCommit: <#T##WKNavigation!#>) {
+        print("読み込み開始")
+        indicator.startAnimating()
+    }
+    
+    // ロードが完了したとき
+    func webView(_ <#T##webView: WKWebView##WKWebView#>, didFinish: <#T##WKNavigation!#>) {
+        print("ロード完了")
+        indicator.stopAnimating()
     }
 
     @IBAction func go(_ sender: Any) {
+        webView.goForward()
     }
     
     @IBAction func back(_ sender: Any) {
+        webView.goBack()
     }
     
 }
