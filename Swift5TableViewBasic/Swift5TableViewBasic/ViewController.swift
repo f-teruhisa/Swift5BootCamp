@@ -43,6 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        cell.selectionStyle = .none
         cell.textLabel?.text = textArray[indexPath.row]
         cell.imageView!.image = UIImage(named: "checkImage")
         
