@@ -26,6 +26,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         textField.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return textArray.count
     }
@@ -44,7 +50,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // タップしたときに、その配列の番号の中身を取り出して値を渡す
+        let nextVC = storyboard?.instantiateViewController(identifier: "next") as! NextViewController
+        nextVC.toDoString = textArray[indexPath.row]
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
