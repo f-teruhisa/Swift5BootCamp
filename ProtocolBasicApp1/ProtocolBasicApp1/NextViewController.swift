@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol CatchProtocol {
+    // 規則を決める
+    func catchData(count:Int)
+}
+
 class NextViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
     var count:Int = 0
+    
+    var deligate:CatchProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +27,12 @@ class NextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func back(_ sender: Any) {
+        // delegateメソッドを任せたクラスで発動させる
+        deligate?.catchData(count: count)
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func plusAction(_ sender: Any) {
         count = count + 1
         label.text = String(count)
