@@ -42,7 +42,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             
         }
         
-       
+        func convert(lat:CLLocationDegrees, log:CLLocationDegrees){
+
+            let geocoder = CLGeocoder()
+            let location = CLLocation(latitude: lat, longitude: log)
+            
+            // CLoser
+            geocoder.reverseGeocodeLocation(location) { (placeMark, error) in
+                // when placeMark is not nil
+                if let placeMark = placeMark{
+                    if let pm = placeMark.first{
+                        if pm.administrativeArea != nil || pm.locality != nil {
+                            self.addressString = pm.name! + pm.administrativeArea! + pm.locality!
+                        }
+                    }
+                }
+            }
+        }
     }
     
 }
