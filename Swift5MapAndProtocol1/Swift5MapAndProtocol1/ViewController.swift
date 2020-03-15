@@ -17,7 +17,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     @IBOutlet weak var settingButton: UIButton!
     
     @IBOutlet weak var mapView: MKMapView!
-    var locManager:CLLocationManager
+    var locManager:CLLocationManager!
     
     @IBOutlet weak var addressLabel: UILabel!
 
@@ -35,27 +35,34 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             
         }else if sender.state == .ended{
             // Whem end to tap
-            
-            // Point the location tapped, and get latitude and longitude with MKMapView
-            
+                        
             // Convert latitude and longitude into address
-            
+            let tapPoint = sender.location(in: view)
+            // Point the location tapped, and get latitude and longitude with MKMapView
+            let center = mapView.convert(tapPoint, toCoordinateFrom: mapView)
+            let lat = center.latitude
+            let log = center.longitude
+            convert(lat: lat, log: log)
         }
-        
-        func convert(lat:CLLocationDegrees, log:CLLocationDegrees){
+    }
+    
+    func convert(lat:CLLocationDegrees, log:CLLocationDegrees){
 
-            let geocoder = CLGeocoder()
-            let location = CLLocation(latitude: lat, longitude: log)
-            
-            // CLoser
-            geocoder.reverseGeocodeLocation(location) { (placeMark, error) in
-                // when placeMark is not nil
-                if let placeMark = placeMark{
-                    if let pm = placeMark.first{
-                        if pm.administrativeArea != nil || pm.locality != nil {
-                            self.addressString = pm.name! + pm.administrativeArea! + pm.locality!
-                        }
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: lat, longitude: log)
+        
+        // CLoser
+        geocoder.reverseGeocodeLocation(location) { (placeMark, error) in
+            // when placeMark is not nil
+            if let placeMark = placeMark{
+                if let pm = placeMark.first{
+                    if pm.administrativeArea != nil || pm.locality != nil {
+                        self.addressString = pm.name! + pm.administrativeArea! + pm.locality!
+                    }else{
+                        self.addressString = pm.name!
                     }
+                    
+                    self.addressLabel.text = self.addressString
                 }
             }
         }
