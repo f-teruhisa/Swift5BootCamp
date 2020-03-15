@@ -12,6 +12,7 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
 
+    var addressString = ""
     @IBOutlet var longPress: UILongPressGestureRecognizer!
     @IBOutlet weak var settingButton: UIButton!
     
@@ -29,9 +30,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     }
 
     @IBAction func longPressTap(_ sender: UILongPressGestureRecognizer) {
-        // When start to tap
+        if sender.state == .began {
+            // When begin to tap
+            
+        }else if sender.state == .ended{
+            // Whem end to tap
+            
+            // Point the location tapped, and get latitude and longitude with MKMapView
+            
+            // Convert latitude and longitude into address
+            
+        }
         
-        // Whem complete to tap
+       
     }
     
 }
