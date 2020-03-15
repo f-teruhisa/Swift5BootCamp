@@ -10,8 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
-
+class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate, SearchLocationDeligate {
     var addressString = ""
     @IBOutlet var longPress: UILongPressGestureRecognizer!
     @IBOutlet weak var settingButton: UIButton!
@@ -76,6 +75,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "next"{
             let nextVC = segue.destination as! NextViewController
+            nextVC.deligate = self
+        }
+    }
+
+    // deligate method
+    func searchLocation(idoValue: String, keidoValue: String) {
+        if idoValue.isEmpty != true && keidoValue.isEmpty != true{
+            let idoString = idoValue
+            let keidoString = keidoValue
+            
+            // Coordinate with latitude and longitude
+            let coordinate = CLLocationCoordinate2DMake(Double(idoString)!, Double(keidoString)!)
+            
+            // Specify range can be showed
+            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            
+            // Specify area
+            let region = MKCoordinateRegion(center: coordinate, span: span)
+            
+            // Set area into mapView
+            mapView.setRegion(region, animated: true)
+            
+            // Convert latitude and longitude into address
+            convert(lat: Double(idoString)!, log: Double(keidoString)!)
+            
+            // Display address on label
+            addressLabel.text = addressString
+        }else{
+            addressLabel.text = "表示できません"
         }
     }
 }

@@ -29,12 +29,11 @@ class NextViewController: UIViewController {
         // Get texts in textFields
         let idoValue = idoTextField.text!
         let keidoValue = keidoTextField.text!
-                
-        // set texts into args in deligate method
-        deligate?.searchLocation(idoValue: idoValue, keidoValue: keidoValue)
         
         // dismiss unless two textFIelds are not empty
         if idoTextField.text != nil && keidoTextField.text != nil{
+            // set texts into args in deligate method
+            deligate?.searchLocation(idoValue: idoValue, keidoValue: keidoValue)
             dismiss(animated: true, completion: nil)
         }
     }
