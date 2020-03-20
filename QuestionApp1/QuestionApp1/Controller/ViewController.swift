@@ -60,8 +60,32 @@ class ViewController: UIViewController {
     }
     
     func check(){
-        
+        let correctAnswer = imagesList.list[questionNumber].answer
+        if correctAnswer == pickedAnswer{
+            print("正解")
+            correctCount = correctCount + 1
+        }else{
+            print("間違い")
+            wrongCount = wrongCount + 1
+        }
     }
     
+    func newxtQuestions(){
+        if questionNumber <= 9{
+            questionNumber = questionNumber + 1
+            imageView.image = UIImage(named: imagesList.list[questionNumber].imageText)
+        }else{
+            print("問題終了")
+            // 画面遷移
+            performSegue(withIdentifier: "next", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "next"{
+            let nextVC = segue.destination as! NextViewController
+            nextVC.correctedCount = correctCount
+            nextVC.wrongCount = wrongCount
+        }
+    }
 }
-
