@@ -10,6 +10,8 @@
 		981BA3052424AA480015CFA0 /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981BA3042424AA480015CFA0 /* SoundFile.swift */; };
 		981BA3072424AE270015CFA0 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981BA3062424AE270015CFA0 /* Animal.swift */; };
 		981BA3092424AE5A0015CFA0 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981BA3082424AE5A0015CFA0 /* Human.swift */; };
+		981BA30B2424AFCA0015CFA0 /* WithOutMP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981BA30A2424AFCA0015CFA0 /* WithOutMP3.swift */; };
+		981BA30D2424B3990015CFA0 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981BA30C2424B3990015CFA0 /* ChangeColor.swift */; };
 		98527D2F242478D30036F2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98527D2E242478D30036F2F6 /* AppDelegate.swift */; };
 		98527D31242478D30036F2F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98527D30242478D30036F2F6 /* SceneDelegate.swift */; };
 		98527D33242478D30036F2F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98527D32242478D30036F2F6 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		981BA3042424AA480015CFA0 /* SoundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
 		981BA3062424AE270015CFA0 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		981BA3082424AE5A0015CFA0 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		981BA30A2424AFCA0015CFA0 /* WithOutMP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithOutMP3.swift; sourceTree = "<group>"; };
+		981BA30C2424B3990015CFA0 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 		98527D2B242478D30036F2F6 /* QuestionApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionApp1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98527D2E242478D30036F2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98527D30242478D30036F2F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				981BA3042424AA480015CFA0 /* SoundFile.swift */,
 				981BA3062424AE270015CFA0 /* Animal.swift */,
 				981BA3082424AE5A0015CFA0 /* Human.swift */,
+				981BA30A2424AFCA0015CFA0 /* WithOutMP3.swift */,
+				981BA30C2424B3990015CFA0 /* ChangeColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,12 +199,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				98527D33242478D30036F2F6 /* ViewController.swift in Sources */,
+				981BA30D2424B3990015CFA0 /* ChangeColor.swift in Sources */,
 				981BA3072424AE270015CFA0 /* Animal.swift in Sources */,
 				981BA3052424AA480015CFA0 /* SoundFile.swift in Sources */,
 				98527D4C24247C120036F2F6 /* NextViewController.swift in Sources */,
 				981BA3092424AE5A0015CFA0 /* Human.swift in Sources */,
 				98527D2F242478D30036F2F6 /* AppDelegate.swift in Sources */,
 				98527D31242478D30036F2F6 /* SceneDelegate.swift in Sources */,
+				981BA30B2424AFCA0015CFA0 /* WithOutMP3.swift in Sources */,
 				98C19C6524248820002DA121 /* ImagesModel.swift in Sources */,
 				98C19C6724248938002DA121 /* ImagesList.swift in Sources */,
 			);

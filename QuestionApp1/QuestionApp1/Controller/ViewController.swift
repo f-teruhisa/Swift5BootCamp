@@ -23,11 +23,20 @@ class ViewController: UIViewController, NowScoreDeligate {
     // IBActionで検知した正答がどちらなのかを取得する変数
     var pickedAnswer = false
     
+    var soundFile = SoundFile()
+    var changeColor = ChangeColor()
+    var gradientLayer = CAGradientLayer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let human = Human()
-        human.breath()
+        
+        gradientLayer = changeColor.changeColor(topR: 0.07, topG: 0.13, topB: 0.26, topAlpha: 1.0, bottomR: 0.54, bottomG: 0.74, bottomB: 0.74, bottomAlpha: 1.0)
+        gradientLayer.frame = view.bounds
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        imageView.layer.cornerRadius = 20.0
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,8 +49,6 @@ class ViewController: UIViewController, NowScoreDeligate {
         
         if UserDefaults.standard.object(forKey: "beforeCount") != nil {
             maxScore = UserDefaults.standard.object(forKey: "beforeCount") as! Int
-        }else{
-            
         }
         maxScoreLabel.text = String(maxScore)
     }
@@ -49,19 +56,16 @@ class ViewController: UIViewController, NowScoreDeligate {
     @IBAction func answer(_ sender: Any) {
         if (sender as AnyObject).tag == 1{
             // ○ボタンが押されたとき
+            // ○ボタンの音声を流す
+            soundFile.playSound(fileName: "maruSound", extensionName: "mp3")
             // ユーザーが押したボタンが○ボタンだった
             pickedAnswer = true
-            
-            // ○ボタンの音声を流す
-            
         }else if (sender as AnyObject).tag == 2{
-            pickedAnswer = false
             // ✗ボタンが押されたとき
-            
-            // ユーザーが押したボタンが✗ボタンだった
-            
             // ✗ボタンの音声を流す
-            
+            soundFile.playSound(fileName: "batsuSound", extensionName: "mp3")
+            // ユーザーが押したボタンが✗ボタンだった
+            pickedAnswer = false
         }
         
         // 回答があっているかどうかをチェックする
@@ -89,7 +93,9 @@ class ViewController: UIViewController, NowScoreDeligate {
             performSegue(withIdentifier: "next", sender: nil)
         }
     }
+
     func nowScore(score: Int) {
+        soundFile.playSound(fileName: "sound", extensionName: "mp3")
         maxScoreLabel.text = String(score)
     }
     
