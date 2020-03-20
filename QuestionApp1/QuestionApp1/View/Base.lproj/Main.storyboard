@@ -54,7 +54,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageVIew" destination="znU-Je-lfm" id="XDT-la-v5N"/>
+                        <outlet property="imageView" destination="znU-Je-lfm" id="H6C-N4-StO"/>
                         <outlet property="maxScoreLabel" destination="DCs-p7-SFE" id="gGb-SY-vTa"/>
                         <segue destination="WJ6-ck-2go" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="G5y-h7-1ky"/>
                     </connections>
@@ -103,6 +103,9 @@
                                 <rect key="frame" x="143" y="440" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="home"/>
+                                <connections>
+                                    <action selector="back:" destination="WJ6-ck-2go" eventType="touchUpInside" id="AIJ-33-F29"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96993559600000001" green="0.95503686710000002" blue="0.87849281440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

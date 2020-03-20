@@ -8,13 +8,22 @@
 
 import UIKit
 
+protocol NowScoreDeligate {
+    func nowScore(score: Int)
+}
+
 class NextViewController: UIViewController {
 
     @IBOutlet weak var correctLabel: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
     
+    var deligate:NowScoreDeligate?
+    
+    
     var correctedCount = Int()
     var wrongCount = Int()
+    
+    var beforeCount = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +34,17 @@ class NextViewController: UIViewController {
         wrongLabel.text = String(wrongCount)
     }
     
-
+    @IBAction func back(_ sender: Any) {
+        // もし最高得点であれば、入れ替える
+        if beforeCount < correctedCount{
+            UserDefaults.standard.set(correctedCount, forKey: "beforeCount")
+            deligate?.nowScore(score: correctedCount)
+        }else{
+         // 最高得点でない場合は、入れ替えない
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
