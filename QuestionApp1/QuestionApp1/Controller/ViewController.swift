@@ -26,6 +26,8 @@ class ViewController: UIViewController, NowScoreDeligate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let human = Human()
+        human.breath()
     }
     
     override func viewWillAppear(_ animated: Bool) {
