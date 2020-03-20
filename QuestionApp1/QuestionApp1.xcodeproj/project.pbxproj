@@ -13,6 +13,9 @@
 		98527D36242478D30036F2F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98527D34242478D30036F2F6 /* Main.storyboard */; };
 		98527D38242478D60036F2F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98527D37242478D60036F2F6 /* Assets.xcassets */; };
 		98527D3B242478D60036F2F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98527D39242478D60036F2F6 /* LaunchScreen.storyboard */; };
+		98527D4324247A390036F2F6 /* batsuSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98527D4224247A390036F2F6 /* batsuSound.mp3 */; };
+		98527D4624247A420036F2F6 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98527D4424247A420036F2F6 /* sound.mp3 */; };
+		98527D4724247A420036F2F6 /* maruSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98527D4524247A420036F2F6 /* maruSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		98527D37242478D60036F2F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98527D3A242478D60036F2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98527D3C242478D60036F2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98527D4224247A390036F2F6 /* batsuSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsuSound.mp3; sourceTree = "<group>"; };
+		98527D4424247A420036F2F6 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		98527D4524247A420036F2F6 /* maruSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maruSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		98527D2D242478D30036F2F6 /* QuestionApp1 */ = {
 			isa = PBXGroup;
 			children = (
-				98527D2E242478D30036F2F6 /* AppDelegate.swift */,
-				98527D30242478D30036F2F6 /* SceneDelegate.swift */,
-				98527D32242478D30036F2F6 /* ViewController.swift */,
-				98527D34242478D30036F2F6 /* Main.storyboard */,
-				98527D37242478D60036F2F6 /* Assets.xcassets */,
+				98527D4824247AB10036F2F6 /* Model */,
+				98527D4924247AC10036F2F6 /* View */,
+				98527D4A24247AC90036F2F6 /* Controller */,
+				98527D4524247A420036F2F6 /* maruSound.mp3 */,
+				98527D4424247A420036F2F6 /* sound.mp3 */,
+				98527D4224247A390036F2F6 /* batsuSound.mp3 */,
 				98527D39242478D60036F2F6 /* LaunchScreen.storyboard */,
 				98527D3C242478D60036F2F6 /* Info.plist */,
 			);
 			path = QuestionApp1;
+			sourceTree = "<group>";
+		};
+		98527D4824247AB10036F2F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98527D4924247AC10036F2F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98527D34242478D30036F2F6 /* Main.storyboard */,
+				98527D37242478D60036F2F6 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98527D4A24247AC90036F2F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				98527D2E242478D30036F2F6 /* AppDelegate.swift */,
+				98527D30242478D30036F2F6 /* SceneDelegate.swift */,
+				98527D32242478D30036F2F6 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +158,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98527D4324247A390036F2F6 /* batsuSound.mp3 in Resources */,
 				98527D3B242478D60036F2F6 /* LaunchScreen.storyboard in Resources */,
 				98527D38242478D60036F2F6 /* Assets.xcassets in Resources */,
 				98527D36242478D30036F2F6 /* Main.storyboard in Resources */,
+				98527D4624247A420036F2F6 /* sound.mp3 in Resources */,
+				98527D4724247A420036F2F6 /* maruSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
