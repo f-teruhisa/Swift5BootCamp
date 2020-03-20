@@ -17,8 +17,8 @@
 		98527D4624247A420036F2F6 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98527D4424247A420036F2F6 /* sound.mp3 */; };
 		98527D4724247A420036F2F6 /* maruSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98527D4524247A420036F2F6 /* maruSound.mp3 */; };
 		98527D4C24247C120036F2F6 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98527D4B24247C120036F2F6 /* NextViewController.swift */; };
-		98C19C6524248820002DA121 /* imagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C19C6424248820002DA121 /* imagesModel.swift */; };
-		98C19C6724248938002DA121 /* imagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C19C6624248938002DA121 /* imagesList.swift */; };
+		98C19C6524248820002DA121 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C19C6424248820002DA121 /* ImagesModel.swift */; };
+		98C19C6724248938002DA121 /* ImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C19C6624248938002DA121 /* ImagesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		98527D4424247A420036F2F6 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		98527D4524247A420036F2F6 /* maruSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maruSound.mp3; sourceTree = "<group>"; };
 		98527D4B24247C120036F2F6 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		98C19C6424248820002DA121 /* imagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesModel.swift; sourceTree = "<group>"; };
-		98C19C6624248938002DA121 /* imagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesList.swift; sourceTree = "<group>"; };
+		98C19C6424248820002DA121 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
+		98C19C6624248938002DA121 /* ImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 		98527D4824247AB10036F2F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				98C19C6424248820002DA121 /* imagesModel.swift */,
-				98C19C6624248938002DA121 /* imagesList.swift */,
+				98C19C6424248820002DA121 /* ImagesModel.swift */,
+				98C19C6624248938002DA121 /* ImagesList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 				98527D4C24247C120036F2F6 /* NextViewController.swift in Sources */,
 				98527D2F242478D30036F2F6 /* AppDelegate.swift in Sources */,
 				98527D31242478D30036F2F6 /* SceneDelegate.swift in Sources */,
-				98C19C6524248820002DA121 /* imagesModel.swift in Sources */,
-				98C19C6724248938002DA121 /* imagesList.swift in Sources */,
+				98C19C6524248820002DA121 /* ImagesModel.swift in Sources */,
+				98C19C6724248938002DA121 /* ImagesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
