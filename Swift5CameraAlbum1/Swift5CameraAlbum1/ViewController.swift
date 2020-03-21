@@ -65,5 +65,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // 撮影が完了した、アルバムから画像が選ばれたときに呼ばれるメソッド
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[.editedImage] as? UIImage{
+            backImageView.image = pickedImage
+            
+            // 写真の保存
+            UIImageWriteToSavedPhotosAlbum(pickedImage, self, nil, nil)
+            
+            // 閉じる
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
 
