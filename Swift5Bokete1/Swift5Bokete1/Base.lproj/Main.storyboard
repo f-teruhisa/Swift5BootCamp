@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift5Bokete1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Swift5Bokete1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,11 +45,17 @@
                                 <rect key="frame" x="49" y="771" width="328" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="決定"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PyY-de-Z1E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN2-CL-Jdd">
                                 <rect key="frame" x="348" y="111" width="29" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="search"/>
+                                <connections>
+                                    <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9Q-yU-3iy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89213878123488277" green="0.9426510286047074" blue="0.97315162420272827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,16 +65,17 @@
                         <outlet property="commentTextView" destination="vdn-Aa-2BP" id="F0S-9X-3aX"/>
                         <outlet property="odaiImageView" destination="sBb-1W-bIT" id="Gcz-eC-eS7"/>
                         <outlet property="searchTextField" destination="Y78-8e-7Yg" id="ii1-aL-DLT"/>
+                        <segue destination="oHW-PO-vQ3" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="dXT-61-TQK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Share View Controller-->
         <scene sceneID="YWv-1c-ZZC">
             <objects>
-                <viewController id="oHW-PO-vQ3" sceneMemberID="viewController">
+                <viewController id="oHW-PO-vQ3" customClass="ShareViewController" customModule="Swift5Bokete1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VjB-MZ-aAB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +116,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jxX-Tw-TSz"/>
                     </view>
+                    <connections>
+                        <outlet property="commentLabel" destination="a4S-IL-gIA" id="shI-cx-qK6"/>
+                        <outlet property="resultImageView" destination="SvT-TT-OSC" id="Zil-qz-bzD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2n-OL-HvG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

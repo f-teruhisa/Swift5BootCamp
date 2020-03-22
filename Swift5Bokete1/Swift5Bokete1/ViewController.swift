@@ -48,8 +48,14 @@ class ViewController: UIViewController {
             switch response.result{
                 case .success:
                     let json:JSON = JSON(response.data as Any)
-                    let imageString = json["hits"][self.count]["webformatURL"].string
-                    self.odaiImageView.sd_setImage(with: URL(string: imageString!), completed: nil)
+                    var imageString = json["hits"][self.count]["webformatURL"].string
+                    
+                    if imageString == nil{
+                        imageString = json["hits"][0]["webformatURL"].string
+                        self.odaiImageView.sd_setImage(with: URL(string: imageString!), completed: nil)
+                    }else{
+                        self.odaiImageView.sd_setImage(with: URL(string: imageString!), completed: nil)
+                    }
                 
                 case .failure(let error):
                     print(error)
@@ -65,8 +71,32 @@ class ViewController: UIViewController {
     
     @IBAction func nextOdai(_ sender: Any) {
         count = count + 1
-        // getImages(keyword: <#T##String#>)
+        
+        if searchTextField.text == ""{
+            getImages(keyword: "funny")
+        }else{
+            getImages(keyword: searchTextField.text!)
+        }
     }
     
+    @IBAction func searchAction(_ sender: Any) {
+        self.count = 0
+        if searchTextField.text == ""{
+            getImages(keyword: "funny")
+        }else{
+            getImages(keyword: searchTextField.text!)
+        }
+    }
+    
+    @IBAction func next(_ sender: Any) {
+        performSegue(withIdentifier: "next", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let shareVC = segue.destination as? ShareViewController
+        shareVC?.commentString = commentTextView.text
+        shareVC?.resultImage = odaiImageView.image!
+    }
 }
 
