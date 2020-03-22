@@ -99,11 +99,17 @@
                                 <rect key="frame" x="76" y="753" width="262" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="シェアする"/>
+                                <connections>
+                                    <action selector="share:" destination="oHW-PO-vQ3" eventType="touchUpInside" id="D1L-BM-kGs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0J-Ll-3OA">
                                 <rect key="frame" x="76" y="801" width="262" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="back:" destination="oHW-PO-vQ3" eventType="touchUpInside" id="znX-zd-SN3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4S-IL-gIA">
                                 <rect key="frame" x="56" y="537" width="303" height="123"/>
