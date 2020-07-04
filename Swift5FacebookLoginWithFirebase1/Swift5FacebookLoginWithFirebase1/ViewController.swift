@@ -13,11 +13,17 @@ import FacebookCore
 import FacebookLogin
 import Firebase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,LoginButtonDelegate {
+    
+    let fbLoginButton:FBLoginButton = FBLoginButton()
+    var displayNmae = String()
+    var pictureURL = String()
+    var pictureURLString = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        fbLoginButton.delegete = self
     }
 
 
