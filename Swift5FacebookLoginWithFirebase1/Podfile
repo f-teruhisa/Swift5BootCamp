@@ -6,5 +6,11 @@ target 'Swift5FacebookLoginWithFirebase1' do
   use_frameworks!
 
   # Pods for Swift5FacebookLoginWithFirebase1
-
+  pod 'Firebase/Auth'  
+  pod 'FacebookSDK'
+  pod 'Firebase/Core'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  pod 'SDWebImage/WebP'
 end
