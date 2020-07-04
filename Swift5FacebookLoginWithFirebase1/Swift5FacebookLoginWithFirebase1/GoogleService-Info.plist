@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>776153159630-bv2muvfbfj7e95rerltqot5hvg7koo7r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.776153159630-bv2muvfbfj7e95rerltqot5hvg7koo7r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDje-NFBFlZS0QvgBXp1Il124p1UDc71-E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>776153159630</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.teruhisafukumoto.Swift5FacebookLoginWithFirebase1</string>
+	<key>PROJECT_ID</key>
+	<string>facebookloginwithfirebas-bc710</string>
+	<key>STORAGE_BUCKET</key>
+	<string>facebookloginwithfirebas-bc710.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:776153159630:ios:73b25502916ab0faf2fd9f</string>
+	<key>DATABASE_URL</key>
+	<string>https://facebookloginwithfirebas-bc710.firebaseio.com</string>
+</dict>
+</plist>
