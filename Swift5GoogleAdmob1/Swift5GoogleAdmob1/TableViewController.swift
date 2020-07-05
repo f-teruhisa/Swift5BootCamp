@@ -24,6 +24,8 @@ class TableViewController: UITableViewController, GADBannerViewDelegate, GADInte
         backImageView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         backImageView.image = image
         tableView.backgroundView = backImageView
+        
+        interstitial = createAndLoadInterstitial()
 
     }
 
@@ -51,7 +53,7 @@ class TableViewController: UITableViewController, GADBannerViewDelegate, GADInte
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BannerCell", for: indexPath)
             let bannerView = cell.viewWithTag(1) as! GADBannerView
-            bannerView.adUnitID = "ca-app-pub-3940256099942544~1458002511"
+            bannerView.adUnitID = "ca-app-pub-2343354750379592/9693870737"
             bannerView.rootViewController = self
             bannerView.load(GADRequest())
             
@@ -83,10 +85,14 @@ class TableViewController: UITableViewController, GADBannerViewDelegate, GADInte
     }
     
     func createAndLoadInterstitial() -> GADInterstitial{
-        var interstitial = GADInterstitial(adUnitID: "")
+        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-2343354750379592/5946197412")
         interstitial.delegate = self
-        interstitial.load(GADRequest)
+        interstitial.load(GADRequest())
         
         return interstitial
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
     }
 }

@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544~1458002511"
+        bannerView.adUnitID = "ca-app-pub-2343354750379592/2390095782"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
