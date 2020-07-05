@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		9898AFC824B1E8F000214691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9898AFC624B1E8F000214691 /* Main.storyboard */; };
 		9898AFCA24B1E8F100214691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9898AFC924B1E8F100214691 /* Assets.xcassets */; };
 		9898AFCD24B1E8F100214691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9898AFCB24B1E8F100214691 /* LaunchScreen.storyboard */; };
+		98EFC32524B1EC540057A0BF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EFC32424B1EC540057A0BF /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9898AFC924B1E8F100214691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9898AFCC24B1E8F100214691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9898AFCE24B1E8F100214691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98EFC32424B1EC540057A0BF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				9898AFC924B1E8F100214691 /* Assets.xcassets */,
 				9898AFCB24B1E8F100214691 /* LaunchScreen.storyboard */,
 				9898AFCE24B1E8F100214691 /* Info.plist */,
+				98EFC32424B1EC540057A0BF /* TableViewController.swift */,
 			);
 			path = Swift5GoogleAdmob1;
 			sourceTree = "<group>";
@@ -80,7 +83,6 @@
 				2BE3EB90274BEF68A0468E61 /* Pods-Swift5GoogleAdmob1.debug.xcconfig */,
 				7C87E10629DB4BCE0D0EC61F /* Pods-Swift5GoogleAdmob1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +212,7 @@
 				9898AFC524B1E8F000214691 /* ViewController.swift in Sources */,
 				9898AFC124B1E8F000214691 /* AppDelegate.swift in Sources */,
 				9898AFC324B1E8F000214691 /* SceneDelegate.swift in Sources */,
+				98EFC32524B1EC540057A0BF /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

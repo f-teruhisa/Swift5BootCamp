@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
+
+    @IBOutlet weak var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        bannerView.adUnitID = ""
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
 
 
