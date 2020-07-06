@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="2082.608695652174" y="-78.348214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Khh-zV-PTl">
             <objects>
-                <viewController id="5eL-A5-3bX" sceneMemberID="viewController">
+                <viewController id="5eL-A5-3bX" customClass="RegisterViewController" customModule="ChatApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mlx-B5-CSF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,12 +147,19 @@
                                 <state key="normal" title="新規登録">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerNewUser:" destination="5eL-A5-3bX" eventType="touchUpInside" id="1jV-Wc-5om"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IyP-yM-cOS"/>
                     </view>
                     <navigationItem key="navigationItem" id="VdS-Y4-sTu"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="3bk-51-XrZ" id="2FA-Ce-NmA"/>
+                        <outlet property="passwordTextField" destination="v4I-Bd-yCt" id="08p-Yo-o6P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RY2-af-Mg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
