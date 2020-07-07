@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  ChatViewController.swift
 //  ChatApp1
 //
 //  Created by MBP010 on 2020/07/06.
@@ -7,16 +7,9 @@
 //
 
 import UIKit
-import Firebase
-import Lottie
 
-class RegisterViewController: UITableViewController {
+class ChatViewController: UITableViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    let animationView = AnimationView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,42 +20,6 @@ class RegisterViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // Firebaseにユーザーを登録する
-    @IBAction func registerNewUser(_ sender: Any) {
-        // アニメーションの開始
-        
-        // 新規登録
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            if error != nil{
-                print(error as Any)
-                
-            }else{
-                print("ユーザーの作成に成功しました")
-                
-                // アニメーションの終了
-                self.stopAnimation()
-                // 画面をチャット画面に遷移させる
-                self.performSegue(withIdentifier: "chat", sender: nil)
-            }
-        }
-        
-    }
-    
-    func startAnimation(){
-        let animation = Animation.named("loading")
-        animationView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height/1.5)
-        
-        animationView.animation = animation
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop
-        animationView.play()
-        
-        view.addSubview(animationView)
-    }
-    
-    func stopAnimation(){
-        animationView.removeFromSuperview()
-    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -1,8 +1,8 @@
 //
-//  RegisterViewController.swift
+//  LoginViewController.swift
 //  ChatApp1
 //
-//  Created by MBP010 on 2020/07/06.
+//  Created by MBP010 on 2020/07/07.
 //  Copyright © 2020 Teruhisa Fukumoto. All rights reserved.
 //
 
@@ -10,13 +10,13 @@ import UIKit
 import Firebase
 import Lottie
 
-class RegisterViewController: UITableViewController {
+class LoginViewController: UITableViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     let animationView = AnimationView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,25 +27,20 @@ class RegisterViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // Firebaseにユーザーを登録する
-    @IBAction func registerNewUser(_ sender: Any) {
-        // アニメーションの開始
+    @IBAction func login(_ sender: Any) {
+        startAnimation()
         
-        // 新規登録
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error != nil{
-                print(error as Any)
                 
+                print(error)
+
             }else{
-                print("ユーザーの作成に成功しました")
-                
-                // アニメーションの終了
+                print("ログイン成功！")
                 self.stopAnimation()
-                // 画面をチャット画面に遷移させる
                 self.performSegue(withIdentifier: "chat", sender: nil)
             }
         }
-        
     }
     
     func startAnimation(){
@@ -63,6 +58,13 @@ class RegisterViewController: UITableViewController {
     func stopAnimation(){
         animationView.removeFromSuperview()
     }
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
