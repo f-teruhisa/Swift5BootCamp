@@ -8,16 +8,51 @@
 
 import UIKit
 
-class ChatViewController: UITableViewController {
+class ChatViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    // スクリーンのサイズ
+    let screenSize = UIScreen.main.bounds.size
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        // 可変になる
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        tableView.estimatedRowHeight = 75
+        
+        // キーボードを開く
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        // キーボードを閉じる
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        // Firebaseからデータをfetchしてくる
+        
+    }
+    
+    @objc func keyboardWillShow(_ notification:NSNotification){
+        let keyboardHeight = ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as Any) as AnyObject).cgRectValue.height
+        
+        messageTextField.frame.origin.y = screenSize.height - keyboardHeight - messageTextField.frame.height
+    }
+    
+    @objc func keyboardWillHide(_ notification:NSNotification){
+        messageTextField.frame.origin.y = screenSize.height - messageTextField.frame.height
+        
+        guard let rect = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else{return}
+        
+        UIView.animate(withDuration: duration) {
+            let transform = CGAffineTransform(translationX: 0, y: 0)
+            self.view.transform = transform
+        }
+        
     }
 
     // MARK: - Table view data source
