@@ -90,13 +90,20 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
         cell.messageLabel.text = chatArray[indexPath.row].message
+        
         cell.userNameLabel.text = chatArray[indexPath.row].sender
         cell.iconImageView.image = UIImage(named: "dogAvatarImage")
         
         if cell.userNameLabel.text == Auth.auth().currentUser?.email as! String?{
             cell.messageLabel.backgroundColor = UIColor.flatGreen()
+            // セルの角を丸くする
+            cell.messageLabel.layer.cornerRadius = 20
+            cell.messageLabel.layer.masksToBounds = true
         }else{
             cell.messageLabel.backgroundColor = UIColor.flatBlue()
+            // セルの角を丸くする
+            cell.messageLabel.layer.cornerRadius = 20
+            cell.messageLabel.layer.masksToBounds = true
         }
         
         return cell

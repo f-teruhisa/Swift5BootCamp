@@ -20,6 +20,7 @@
 		98DED94624B4B29400D82BE5 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED94424B4B29400D82BE5 /* CustomCell.swift */; };
 		98DED94724B4B29400D82BE5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98DED94524B4B29400D82BE5 /* CustomCell.xib */; };
 		98DED94924B4C96D00D82BE5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED94824B4C96D00D82BE5 /* Message.swift */; };
+		98DED94B24B6135A00D82BE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98DED94A24B6135A00D82BE5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		98DED94424B4B29400D82BE5 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		98DED94524B4B29400D82BE5 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		98DED94824B4C96D00D82BE5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		98DED94A24B6135A00D82BE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				98DED93A24B36E8000D82BE5 /* Model */,
 				98DED93124B3641900D82BE5 /* LaunchScreen.storyboard */,
 				98DED93424B3641900D82BE5 /* Info.plist */,
+				98DED94A24B6135A00D82BE5 /* GoogleService-Info.plist */,
 			);
 			path = ChatApp1;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				98DED93324B3641900D82BE5 /* LaunchScreen.storyboard in Resources */,
 				98DED93024B3641900D82BE5 /* Assets.xcassets in Resources */,
+				98DED94B24B6135A00D82BE5 /* GoogleService-Info.plist in Resources */,
 				98DED94724B4B29400D82BE5 /* CustomCell.xib in Resources */,
 				98DED92E24B3641700D82BE5 /* Main.storyboard in Resources */,
 			);
