@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ChameleonFramework
+import Firebase
 
 class ChatViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
@@ -17,6 +19,8 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
     
     var chatArray = [Message]()
     
+    @IBOutlet weak var sendButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -85,7 +89,45 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
         cell.messageLabel.text = chatArray[indexPath.row].message
         cell.userNameLabel.text = chatArray[indexPath.row].sender
         cell.iconImageView.image = UIImage(named: "dogAvatarImage")
+        
+        if cell.userNameLabel.text == Auth.auth().currentUser?.email as! String?{
+            cell.messageLabel.backgroundColor = UIColor.flatGreen()
+        }else{
+            cell.messageLabel.backgroundColor = UIColor.flatBlue()
+        }
+        
+        return cell
     }
+    
+    @IBAction func sendAction(_ sender: Any) {
+        messageTextField.endEditing(true)
+        messageTextField.isEnabled = false
+        sendButton.isEnabled = false
+        
+        let chatDB = Database.database().reference().child("chats")
+        
+        // キーバリュー型で内容を送信する
+        let messageInfo = ["sender":Auth.auth().currentUser?.email, "message": messageTextField.text!]
+        
+        // chatDBに入れる
+        chatDB.childByAutoId().setValue(messageInfo) { (error, result) in
+            if error != nil{
+                print(error)
+            }else{
+                print("送信完了！！")
+                self.messageTextField.isEnabled = true
+                self.sendButton.isEnabled = true
+                self.messageTextField.text = ""
+            }
+        }
+        
+    }
+    
+    //メッセージの受信
+    func fetchChatData(){
+        
+    }
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
