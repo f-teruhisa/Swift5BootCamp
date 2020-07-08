@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 import Firebase
 
-class ChatViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class ChatViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var messageTextField: UITextField!
     
@@ -109,12 +109,16 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     @IBAction func sendAction(_ sender: Any) {
         messageTextField.endEditing(true)
         messageTextField.isEnabled = false
         sendButton.isEnabled = false
         
-        if messageTextField.text.count > 15 {
+        if messageTextField.text!.count > 15 {
             print("15文字以上です")
             
             // 15文字以上は送られないようにする
