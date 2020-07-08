@@ -114,6 +114,13 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
         messageTextField.isEnabled = false
         sendButton.isEnabled = false
         
+        if messageTextField.text.count > 15 {
+            print("15文字以上です")
+            
+            // 15文字以上は送られないようにする
+            return
+        }
+        
         let chatDB = Database.database().reference().child("chats")
         
         // キーバリュー型で内容を送信する
