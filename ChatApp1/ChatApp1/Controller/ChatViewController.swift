@@ -41,7 +41,10 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         // Firebaseからデータをfetchしてくる
+        fetchChatData()
         
+        //セパレートラインを消す
+        tableView.separatorStyle = .none
     }
     
     @objc func keyboardWillShow(_ notification:NSNotification){
@@ -125,7 +128,21 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
     
     //メッセージの受信
     func fetchChatData(){
+        // データの参照元
+        let fetchDataRef = Database.database().reference().child("chats")
         
+        // 新しく更新があったときのみ取得
+        fetchDataRef.observe(.childAdded) { (snapShot) in
+            let snapShotData = snapShot.value as! AnyObject
+            let text = snapShotData.value(forKey: "message")
+            let sender = snapShotData.value(forKey: "sender")
+            
+            let message = Message()
+            message.message = text as! String
+            message.sender = sender as! String
+            self.chatArray.append(message)
+            self.tableView.reloadData()
+        }
     }
     
 
