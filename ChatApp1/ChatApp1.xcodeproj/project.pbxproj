@@ -17,8 +17,9 @@
 		98DED93F24B36F5200D82BE5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED93E24B36F5200D82BE5 /* RegisterViewController.swift */; };
 		98DED94124B3738600D82BE5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED94024B3738600D82BE5 /* ChatViewController.swift */; };
 		98DED94324B4AF8600D82BE5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED94224B4AF8600D82BE5 /* LoginViewController.swift */; };
-		98DED94624B4B29400D82BE5 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED94424B4B29400D82BE5 /* CustomCellTableViewCell.swift */; };
-		98DED94724B4B29400D82BE5 /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98DED94524B4B29400D82BE5 /* CustomCellTableViewCell.xib */; };
+		98DED94624B4B29400D82BE5 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED94424B4B29400D82BE5 /* CustomCell.swift */; };
+		98DED94724B4B29400D82BE5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98DED94524B4B29400D82BE5 /* CustomCell.xib */; };
+		98DED94924B4C96D00D82BE5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DED94824B4C96D00D82BE5 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,9 @@
 		98DED93E24B36F5200D82BE5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		98DED94024B3738600D82BE5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		98DED94224B4AF8600D82BE5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		98DED94424B4B29400D82BE5 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
-		98DED94524B4B29400D82BE5 /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
+		98DED94424B4B29400D82BE5 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		98DED94524B4B29400D82BE5 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		98DED94824B4C96D00D82BE5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		98DED93A24B36E8000D82BE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				98DED94824B4C96D00D82BE5 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,8 +114,8 @@
 			children = (
 				98DED92C24B3641700D82BE5 /* Main.storyboard */,
 				98DED92F24B3641900D82BE5 /* Assets.xcassets */,
-				98DED94424B4B29400D82BE5 /* CustomCellTableViewCell.swift */,
-				98DED94524B4B29400D82BE5 /* CustomCellTableViewCell.xib */,
+				98DED94424B4B29400D82BE5 /* CustomCell.swift */,
+				98DED94524B4B29400D82BE5 /* CustomCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,7 +195,7 @@
 			files = (
 				98DED93324B3641900D82BE5 /* LaunchScreen.storyboard in Resources */,
 				98DED93024B3641900D82BE5 /* Assets.xcassets in Resources */,
-				98DED94724B4B29400D82BE5 /* CustomCellTableViewCell.xib in Resources */,
+				98DED94724B4B29400D82BE5 /* CustomCell.xib in Resources */,
 				98DED92E24B3641700D82BE5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,8 +252,9 @@
 				98DED94324B4AF8600D82BE5 /* LoginViewController.swift in Sources */,
 				98DED92B24B3641700D82BE5 /* ViewController.swift in Sources */,
 				98DED92724B3641600D82BE5 /* AppDelegate.swift in Sources */,
-				98DED94624B4B29400D82BE5 /* CustomCellTableViewCell.swift in Sources */,
+				98DED94624B4B29400D82BE5 /* CustomCell.swift in Sources */,
 				98DED92924B3641700D82BE5 /* SceneDelegate.swift in Sources */,
+				98DED94924B4C96D00D82BE5 /* Message.swift in Sources */,
 				98DED94124B3738600D82BE5 /* ChatViewController.swift in Sources */,
 				98DED93F24B36F5200D82BE5 /* RegisterViewController.swift in Sources */,
 			);

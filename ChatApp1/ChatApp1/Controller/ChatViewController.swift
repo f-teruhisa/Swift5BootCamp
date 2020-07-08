@@ -8,18 +8,22 @@
 
 import UIKit
 
-class ChatViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var messageTextField: UITextField!
     
     // スクリーンのサイズ
     let screenSize = UIScreen.main.bounds.size
     
+    var chatArray = [Message]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        messageTextField.delegate = self
+        
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "Cell")
         // 可変になる
         tableView.rowHeight = UITableView.automaticDimension
@@ -54,6 +58,15 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
         }
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        messageTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     // MARK: - Table view data source
 
@@ -63,8 +76,15 @@ class ChatViewController: UITableViewController, UITableViewDelegate, UITableVie
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        // メッセージの数
+        return chatArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
+        cell.messageLabel.text = chatArray[indexPath.row].message
+        cell.userNameLabel.text = chatArray[indexPath.row].sender
+        cell.iconImageView.image = UIImage(named: "dogAvatarImage")
     }
 
     /*
