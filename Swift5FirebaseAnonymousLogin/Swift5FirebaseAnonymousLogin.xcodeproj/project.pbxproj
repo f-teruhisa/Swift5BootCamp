@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		98C0C43E24B9BCE100F88391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C0C43D24B9BCE100F88391 /* AppDelegate.swift */; };
 		98C0C44024B9BCE100F88391 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C0C43F24B9BCE100F88391 /* SceneDelegate.swift */; };
-		98C0C44224B9BCE100F88391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C0C44124B9BCE100F88391 /* ViewController.swift */; };
 		98C0C44524B9BCE100F88391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C0C44324B9BCE100F88391 /* Main.storyboard */; };
 		98C0C44724B9BCE500F88391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C0C44624B9BCE500F88391 /* Assets.xcassets */; };
 		98C0C44A24B9BCE600F88391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C0C44824B9BCE600F88391 /* LaunchScreen.storyboard */; };
+		98C0C45524B9CAA900F88391 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98C0C45424B9CAA900F88391 /* GoogleService-Info.plist */; };
+		98C0C45924B9ED1800F88391 /* TourokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C0C45824B9ED1800F88391 /* TourokuViewController.swift */; };
+		98F74FBA24BAEE880001EA42 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F74FB924BAEE880001EA42 /* InputViewController.swift */; };
 		EE484BF5D1D232DF65345004 /* Pods_Swift5FirebaseAnonymousLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A39E82F60EEF1A0037E7A39 /* Pods_Swift5FirebaseAnonymousLogin.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +24,13 @@
 		98C0C43A24B9BCE100F88391 /* Swift5FirebaseAnonymousLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5FirebaseAnonymousLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C0C43D24B9BCE100F88391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98C0C43F24B9BCE100F88391 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		98C0C44124B9BCE100F88391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98C0C44424B9BCE100F88391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98C0C44624B9BCE500F88391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98C0C44924B9BCE600F88391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98C0C44B24B9BCE600F88391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98C0C45424B9CAA900F88391 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98C0C45824B9ED1800F88391 /* TourokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourokuViewController.swift; sourceTree = "<group>"; };
+		98F74FB924BAEE880001EA42 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		B72DE243111E22A5EFBCE7B0 /* Pods-Swift5FirebaseAnonymousLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5FirebaseAnonymousLogin.debug.xcconfig"; path = "Target Support Files/Pods-Swift5FirebaseAnonymousLogin/Pods-Swift5FirebaseAnonymousLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +79,7 @@
 				98C0C45324B9BFED00F88391 /* View */,
 				98C0C45224B9BFE600F88391 /* Controller */,
 				98C0C44B24B9BCE600F88391 /* Info.plist */,
+				98C0C45424B9CAA900F88391 /* GoogleService-Info.plist */,
 			);
 			path = Swift5FirebaseAnonymousLogin;
 			sourceTree = "<group>";
@@ -91,7 +96,8 @@
 			children = (
 				98C0C43D24B9BCE100F88391 /* AppDelegate.swift */,
 				98C0C43F24B9BCE100F88391 /* SceneDelegate.swift */,
-				98C0C44124B9BCE100F88391 /* ViewController.swift */,
+				98C0C45824B9ED1800F88391 /* TourokuViewController.swift */,
+				98F74FB924BAEE880001EA42 /* InputViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98C0C45524B9CAA900F88391 /* GoogleService-Info.plist in Resources */,
 				98C0C44A24B9BCE600F88391 /* LaunchScreen.storyboard in Resources */,
 				98C0C44724B9BCE500F88391 /* Assets.xcassets in Resources */,
 				98C0C44524B9BCE100F88391 /* Main.storyboard in Resources */,
@@ -230,9 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98C0C44224B9BCE100F88391 /* ViewController.swift in Sources */,
 				98C0C43E24B9BCE100F88391 /* AppDelegate.swift in Sources */,
+				98C0C45924B9ED1800F88391 /* TourokuViewController.swift in Sources */,
 				98C0C44024B9BCE100F88391 /* SceneDelegate.swift in Sources */,
+				98F74FBA24BAEE880001EA42 /* InputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
