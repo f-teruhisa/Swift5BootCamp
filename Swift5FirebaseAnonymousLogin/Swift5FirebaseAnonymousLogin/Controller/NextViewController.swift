@@ -8,14 +8,47 @@
 
 import UIKit
 
-class NextViewController: UIViewController {
+class NextViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var timeLineTableView: UITableView!
+    @IBOutlet weak var cameraButton: UIButton!
+    
+    var selectedImage = UIImage()
+    
+    var userName = String()
+    var userImageData = Data()
+    var userImage = UIImage()
+    var commentString = String()
+    var contentImageString = String()
+    var userProfileImageString = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        timeLineTableView.delegate = self
+        timeLineTableView.dataSource = self
+        
+        if UserDefaults.standard.object(forKey: "userName") != nil{
+            userName = UserDefaults.standard.object(forKey: "userName") as! String
+            
+        }
+        
+        if UserDefaults.standard.object(forKey: "userImage") != nil{
+            userImageData = UserDefaults.standard.object(forKey: "userImage") as! Data
+            userImage = UIImage(data: userImageData)!
+            
+        }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
 
     /*
     // MARK: - Navigation

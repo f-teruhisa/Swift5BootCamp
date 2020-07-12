@@ -51,6 +51,7 @@ class InputViewController: UIViewController, UIImagePickerControllerDelegate, UI
         generator.notificationOccurred(.success)
         
         // アラートを出す
+        showAlert()
         
         // カメラorアルバムを選択させる
         
@@ -106,7 +107,20 @@ class InputViewController: UIViewController, UIImagePickerControllerDelegate, UI
     // アラート
     
     func showAlert(){
+        let alertController = UIAlertController(title: "選択", message: "どちらを使用しますか？", preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "カメラ", style: .default) { (alert) in
+            self.doCamera()
+        }
         
+        let action2 = UIAlertAction(title: "アルバム", style: .default) { (alert) in
+            self.doAlbum()
+        }
+        
+        let action3 = UIAlertAction(title: "キャンセル", style: .cancel)
+        
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     /*
